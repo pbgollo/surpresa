@@ -74,8 +74,6 @@ body {
     transform: translateZ(calc(var(--index) * 10));
 }
 
-/* Right */
-
 .items .item:hover + * {
     filter: inherit;
     transform: translateZ(calc(var(--index) * 8.5)) rotateY(35deg);
@@ -99,8 +97,6 @@ body {
     transform: translateZ(calc(var(--index) * .6)) rotateY(15deg);
     z-index: -4;
 }
-
-/* Left */
 
 .items .item:has(+ :hover) {
     filter: inherit;
@@ -132,23 +128,22 @@ body {
 
 .heart {
     position: absolute;
-    top: 10px; /* Posicionamento vertical */
-    right: 10px; /* Posicionamento horizontal */
+    top: 10px;
+    right: 10px;
     width: 20px;
     height: 20px;
-    background-image: url('images/heart.png'); /* Adicione o caminho para o seu ícone de coração */
+    background-image: url('images/heart.png');
     background-size: contain;
     cursor: pointer;
-    opacity: 0; /* Inicialmente invisível */
-    transition: opacity 0.3s ease; /* Transição suave de opacidade */
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .item.clicked .heart {
-    animation: heartBeat 0.6s ease infinite; /* Aplicar animação ao clicar */
-    opacity: 1; /* Tornar visível ao clicar */
+    animation: heartBeat 0.6s ease infinite;
+    opacity: 1;
 }
 
-/* Animação para o ícone de coração */
 @keyframes heartBeat {
     0% {
         transform: scale(1);
